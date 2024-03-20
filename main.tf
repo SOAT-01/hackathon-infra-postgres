@@ -85,7 +85,7 @@ resource "aws_db_instance" "hackathon_db" {
 provider "postgresql" {
   scheme   = "postgres"
   host     = aws_db_instance.hackathon_db.address
-  port     = var.db_port
+  port     = 5432
   username = var.db_user
   password = var.db_password
 }
